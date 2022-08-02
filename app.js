@@ -37,12 +37,6 @@ app.use(fileUpload())
 
 const port = process.env.PORT || 3000
 
-app.get('/api/v1', (req,res) => {
-  // console.log(req.cookies)
-  console.log(req.signedCookies)
-  res.status(StatusCodes.OK).send('Home page')
-})
-
 app.use('/api/v1/auth', authRouter)
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/products', productRouter)
